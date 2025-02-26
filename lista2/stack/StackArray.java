@@ -79,5 +79,6 @@ public class StackArray {
       stack.show();
       stack.push(70);
       stack.show();
+
    }
 }
