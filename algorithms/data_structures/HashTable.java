@@ -17,7 +17,7 @@ public class HashTable<T> {
       return key.hashCode() % this.capacity;
    }
 
-   private void insert(T key) {
+   public void insert(T key) {
       int index = hash(key);
       ArrayList<T> list = table[index];
       if (list == null) {
@@ -31,7 +31,7 @@ public class HashTable<T> {
       this.size++;
    }
 
-   private T remove(T key) {
+   public T remove(T key) {
       int index = hash(key);
       ArrayList<T> list = table[index];
       T current = null;
@@ -47,7 +47,7 @@ public class HashTable<T> {
       return null;
    }
 
-   private T search(T key) {
+   public T search(T key) {
       int index = hash(key);
       ArrayList<T> list = table[index];
       T current = null;
