@@ -3,7 +3,7 @@
 ## Bubble Sort
 Bubble Sort é o algoritmo de ordenação mais simples que funciona trocando repetidamente os elementos adjacentes se estiverem na ordem errada.
 
-- **Complexidade de tempo:** O(n^2)
+- **Complexidade de tempo:** `O(n^2)`
 
 | Pontos Positivos | Pontos Negativos |
 |------------------|------------------|
@@ -21,3 +21,10 @@ Selection Sort é um algoritmo de ordenação que divide a lista de entrada em d
 |------------------|------------------|
 | Simples de implementar | Ineficiente para arrays grandes |
 | Requer pouca memória | Não é estável |
+
+## Insertion Sort
+Insertion Sort é um algoritmo de ordenação que consiste na seleção de um elemento da lista de entrada e inserção dele na posição correta na lista ordenada. O algoritmo continua selecionando e inserindo elementos até que a lista de entrada esteja vazia.
+
+- **Complexidade de tempo**
+   - **Melhor caso:** `O(n)` (quando o array já está ordenado)
+   - **Pior caso:** `O(n^2)` (quando o array está ordenado em ordem decrescente)
