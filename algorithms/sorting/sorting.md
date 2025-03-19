@@ -77,3 +77,17 @@ Shell Sort é um algoritmo de ordenação que é uma extensão do Insertion Sort
 | Eficiente para arrays grandes | Complexo de implementar |
 | Eficiente para arrays pequenos | Não é estável |
 | Complexidade de tempo média `O(n log n)` | |
+
+## Heap Sort
+Heap Sort é um algoritmo de ordenação que utiliza uma estrutura de dados chamada `heap` (árvore binária mantida na forma de array). O algoritmo constrói um heap a partir da lista de entrada e, em seguida, remove o elemento raiz do heap e o insere na lista ordenada. O algoritmo repete esse processo até que o heap esteja vazio.
+
+- **Complexidade de tempo:** `O(n log n)`
+- **Funcionamento:** 
+   1. Percorre a lista sequencialmente
+   2. Insere cada elemento no heap
+   3. Remove o elemento raiz do heap e o insere na lista ordenada
+
+| Pontos Positivos | Pontos Negativos |
+|------------------|------------------|
+| Eficiente para arrays grandes | Não é estável |
+| Complexidade de tempo `O(n log n)` | Complexo de implementar |

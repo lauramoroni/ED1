@@ -3,6 +3,9 @@
 ## Busca Linear
 A busca linear é um algoritmo de busca simples que percorre um vetor de elementos, um por um, até encontrar o elemento desejado.
 
+- **Estático**: Utilização de um vetor fixo. 
+- **Dinâmico**: Utilização de uma lista encadeada.
+
 ```java
    public int search(T[] array, T target) {
       for (int i = 0; i < array.length; i++) {
