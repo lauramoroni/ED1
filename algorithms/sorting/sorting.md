@@ -3,6 +3,8 @@
 ## Bubble Sort
 Bubble Sort é o algoritmo de ordenação mais simples que funciona trocando repetidamente os elementos adjacentes se estiverem na ordem errada.
 
+- [`algorithms/sorting/BubbleSort.java`](https://github.com/lauramoroni/ED1/tree/main/algorithm/sorting/BubbleSort.java)
+
 - **Complexidade de tempo:** `O(n^2)`
 
 | Pontos Positivos | Pontos Negativos |
@@ -14,7 +16,9 @@ Bubble Sort é o algoritmo de ordenação mais simples que funciona trocando rep
 ## Selection Sort
 Selection Sort é um algoritmo de ordenação que divide a lista de entrada em duas partes: a sublista de itens já ordenados e a sublista de itens restantes a serem ordenados. No início, a sublista de itens já ordenados está vazia e a sublista de itens restantes é a lista de entrada inteira.
 
-- **Complexidade de tempo:** O(n^2)
+- [`algorithms/sorting/SelectSort.java`](https://github.com/lauramoroni/ED1/tree/main/algorithm/sorting/SelectSort.java)
+
+- **Complexidade de tempo:** `O(n^2)`
 - **Funcionamento:** O algoritmo encontra o menor elemento da lista e o troca com o primeiro elemento. Então, encontra o segundo menor elemento e o troca com o segundo elemento, e assim por diante.
 
 | Pontos Positivos | Pontos Negativos |
@@ -24,6 +28,9 @@ Selection Sort é um algoritmo de ordenação que divide a lista de entrada em d
 
 ## Insertion Sort
 Insertion Sort é um algoritmo de ordenação que consiste na seleção de um elemento da lista de entrada e inserção dele na posição correta na lista ordenada. O algoritmo continua selecionando e inserindo elementos até que a lista de entrada esteja vazia.
+
+- [`algorithms/sorting/InsertSort.java`](https://github.com/lauramoroni/ED1/tree/main/algorithm/sorting/InsertSort.java)
+
 
 - **Complexidade de tempo**
    - **Melhor caso:** `O(n)` (quando o array já está ordenado)
@@ -38,6 +45,9 @@ Insertion Sort é um algoritmo de ordenação que consiste na seleção de um el
 ## Quick Sort
 Quick Sort é um algoritmo de ordenação baseado no princípio de `Dividir para Conquistar`. O algoritmo escolhe um elemento como pivô e divide a lista de entrada em duas partições: uma com elementos menores que o pivô e outra com elementos maiores que o pivô. Então, o algoritmo ordena recursivamente as partições.
 
+- [`algorithms/sorting/QuickSort.java`](https://github.com/lauramoroni/ED1/tree/main/algorithm/sorting/QuickSort.java)
+
+
 - **Complexidade de tempo**
    - **Melhor caso:** `O(n log n)`
    - **Pior caso:** `O(n^2)` (quando o vetor já está ordenado)
@@ -51,4 +61,19 @@ Quick Sort é um algoritmo de ordenação baseado no princípio de `Dividir para
 |------------------|------------------|
 | Eficiente para arrays grandes | Não é estável |
 | Eficiente para arrays pequenos | Complexo de implementar |
+| Complexidade de tempo média `O(n log n)` | |
+
+## Shell Sort
+Shell Sort é um algoritmo de ordenação que é uma extensão do Insertion Sort. O algoritmo divide a lista de entrada em subgrupos menores e ordena esses subgrupos usando o Insertion Sort. O algoritmo continua dividindo a lista em subgrupos menores e ordenando-os até que a lista inteira esteja ordenada.
+
+- [`algorithms/sorting/ShellSort.java`](https://github.com/lauramoroni/ED1/tree/main/algorithm/sorting/ShellSort.java)
+
+- **Complexidade de tempo:** 
+   - **Melhor caso:** `O(n log n)`
+   - **Pior caso:** `O(n^2)`
+
+| Pontos Positivos | Pontos Negativos |
+|------------------|------------------|
+| Eficiente para arrays grandes | Complexo de implementar |
+| Eficiente para arrays pequenos | Não é estável |
 | Complexidade de tempo média `O(n log n)` | |
