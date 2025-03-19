@@ -28,3 +28,27 @@ Insertion Sort é um algoritmo de ordenação que consiste na seleção de um el
 - **Complexidade de tempo**
    - **Melhor caso:** `O(n)` (quando o array já está ordenado)
    - **Pior caso:** `O(n^2)` (quando o array está ordenado em ordem decrescente)
+
+| Pontos Positivos | Pontos Negativos |
+|------------------|------------------|
+| Simples de implementar | Não tão eficiente quanto outros algoritmos de ordenação |
+| Estável| Não é estável |
+| Eficiente para arrays pequenos | Ineficiente para arrays grandes |
+
+## Quick Sort
+Quick Sort é um algoritmo de ordenação baseado no princípio de `Dividir para Conquistar`. O algoritmo escolhe um elemento como pivô e divide a lista de entrada em duas partições: uma com elementos menores que o pivô e outra com elementos maiores que o pivô. Então, o algoritmo ordena recursivamente as partições.
+
+- **Complexidade de tempo**
+   - **Melhor caso:** `O(n log n)`
+   - **Pior caso:** `O(n^2)` (quando o vetor já está ordenado)
+
+- **Funcionamento:**
+1. Escolher um elemento como pivô.
+2. Particionar a lista de forma que todos os elementos menores que o pivô estejam à esquerda e todos os elementos maiores que o pivô estejam à direita.
+3. Ordenar recursivamente as partições.
+
+| Pontos Positivos | Pontos Negativos |
+|------------------|------------------|
+| Eficiente para arrays grandes | Não é estável |
+| Eficiente para arrays pequenos | Complexo de implementar |
+| Complexidade de tempo média `O(n log n)` | |
