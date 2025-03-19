@@ -57,6 +57,7 @@ public class BinaryTree {
 
       if (isEmpty()) {
          this.root = newNode;
+         return;
       }
 
       while (current != null) {
@@ -65,61 +66,34 @@ public class BinaryTree {
             if (current.left == null) {
                current.left = newNode;
                newNode.parent = parent;
+               return;
             }
+            current = current.left;
          } else if (key > current.key) {
             if (current.right == null) {
                current.right = newNode;
                newNode.parent = parent;
+               return;
             }
+            current = current.right;
          }
       }
    }
 
-   public int remove(int key) {
-      Node nodeRemoved = search(key);
+   public void printInOrder() {
+      printInOrder(this.root);
+      System.out.println();
+   }
 
-      if (nodeRemoved == null) {
-         return -1;
+   public void printInOrder(Node node) {
+      if (node != null) {
+         printInOrder(node.left);
+         System.out.print(node.key + " ");
+         printInOrder(node.right);
       } else {
-         if (nodeRemoved == this.root) {
-            this.root = null;
-         } else {
-            Node parent = nodeRemoved.parent;
-            if (nodeRemoved.left == null && nodeRemoved.right == null) {
-               if (parent.left == nodeRemoved) {
-                  parent.left = null;
-               } else {
-                  parent.right = null;
-               }
-            } else if (nodeRemoved.left != null && nodeRemoved.right == null) {
-               if (parent.left == nodeRemoved) {
-                  parent.left = nodeRemoved.left;
-               } else {
-                  parent.right = nodeRemoved.left;
-               }
-            } else if (nodeRemoved.left == null && nodeRemoved.right != null) {
-               if (parent.left == nodeRemoved) {
-                  parent.left = nodeRemoved.right;
-               } else {
-                  parent.right = nodeRemoved.right;
-               }
-            } else {
-               Node successor = nodeRemoved.right;
-               while (successor.left != null) {
-                  successor = successor.left;
-               }
-
-               nodeRemoved.key = successor.key;
-               if (successor.parent.left == successor) {
-                  successor.parent.left = null;
-               } else {
-                  successor.parent.right = null;
-               }
-            }
-         }
+         return;
       }
 
-      this.size--;
-      return key;
    }
+
 }

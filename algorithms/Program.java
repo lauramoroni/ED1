@@ -4,6 +4,7 @@ public class Program {
       // searching algorithms
       LinearSearch ls = new LinearSearch();
       BinarySearch bs = new BinarySearch();
+      BinaryTree bt = new BinaryTree();
 
       // sorting algorithms
       BubbleSort bubbleSort = new BubbleSort();
@@ -11,12 +12,13 @@ public class Program {
       InsertSort insertSort = new InsertSort();
       QuickSort quickSort = new QuickSort();
       ShellSort shellSort = new ShellSort();
+      BinaryTree searchBinaryTree = new BinaryTree();
 
       // arrays
-      Integer[] arr = { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 };
-      String[] arr2 = { "two", "four", "eight", "sixteen", "thirty-two", "sixty-four", "one hundred twenty-eight", "two hundred fifty-six", "five hundred twelve", "one thousand twenty-four" };
-      Float[] arr3 = { 1.1f, 2.2f, 3.3f, 4.4f, 5.5f, 6.6f, 7.7f, 8.8f, 9.9f, 10.10f }; 
-      Character[] arr4 = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
+      Integer[] arr = { 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2 };
+      String[] arr2 = { "one thousand twenty-four", "five hundred twelve", "two hundred fifty-six", "one hundred twenty-eight", "sixty-four", "thirty-two", "sixteen", "eight", "four", "two" };
+      Float[] arr3 = { 10.10f, 9.9f, 8.8f, 7.7f, 6.6f, 5.5f, 4.4f, 3.3f, 2.2f, 1.1f }; 
+      Character[] arr4 = { 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c', 'b', 'a' };
 
       // tests for searching algorithms and compare the time of execution
       long timeStartLinearSearch = System.nanoTime();
@@ -27,8 +29,23 @@ public class Program {
       System.out.println("Binary Search: " + bs.search(arr, 128));
       long timeEndBinarySearch = System.nanoTime();
 
+      bt.insert(2);
+      bt.insert(4);
+      bt.insert(8);
+      bt.insert(16);
+      bt.insert(32);
+      bt.insert(64);
+      bt.insert(128);
+      bt.insert(256);
+      bt.insert(512);
+      bt.insert(1024);
+      long timeStartBinaryTree = System.nanoTime();
+      System.out.println("Binary Tree: " + bt.search(128));
+      long timeEndBinaryTree = System.nanoTime();
+
       System.out.println("Time of execution for Linear Search: " + (timeEndLinearSearch - timeStartLinearSearch) / 1_000_000.0  + " milliseconds");
       System.out.println("Time of execution for Binary Search: " + (timeEndBinarySearch - timeStartBinarySearch) / 1_000_000.0  + " milliseconds");
+      System.out.println("Time of execution for Binary Tree: " + (timeEndBinaryTree - timeStartBinaryTree) / 1_000_000.0  + " milliseconds");
 
       // tests for sorting algorithms and compare the time of execution
       long timeStartBubbleSort = System.nanoTime();
@@ -66,6 +83,20 @@ public class Program {
       shellSort.sort(arr4);
       long timeEndShellSort = System.nanoTime();
 
+      long timeStartSearchBinaryTree = System.nanoTime();
+      searchBinaryTree.insert(1028);
+      searchBinaryTree.insert(512);
+      searchBinaryTree.insert(256);
+      searchBinaryTree.insert(128);
+      searchBinaryTree.insert(64);
+      searchBinaryTree.insert(32);
+      searchBinaryTree.insert(16);
+      searchBinaryTree.insert(8);
+      searchBinaryTree.insert(4);
+      searchBinaryTree.insert(2);
+      searchBinaryTree.printInOrder();
+      long timeEndSearchBinaryTree = System.nanoTime();
+
       // sorted arrays
       for (int i : arr) {
          System.out.print(i + " ");
@@ -89,5 +120,6 @@ public class Program {
       System.out.println("Time of execution for Insert Sort: " + (timeEndInsertSort - timeStartInsertSort) / 1_000_000.0  + " milliseconds");
       System.out.println("Time of execution for Quick Sort: " + (timeEndQuickSort - timeStartQuickSort) / 1_000_000.0  + " milliseconds");
       System.out.println("Time of execution for Shell Sort: " + (timeEndShellSort - timeStartShellSort) / 1_000_000.0  + " milliseconds");
+      System.out.println("Time of execution for Search Binary Tree: " + (timeEndSearchBinaryTree - timeStartSearchBinaryTree) / 1_000_000.0  + " milliseconds");
    }
 }
