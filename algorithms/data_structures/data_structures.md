@@ -3,7 +3,7 @@
 ## Tabela Hash
 Tabela Hash é uma estrutura de dados que associa chaves de pesquisa a valores, eficientes para operações de inserção, remoção e busca. A tabela hash é composta por um vetor de listas encadeadas, onde cada elemento é inserido em uma lista de acordo com a função de hash.
 
-- [`algorithms/data_structures/HashTable.java`](https://github.com/lauramoroni/ED1/tree/main/algorithm/data_structures/HashTable.java)
+- [`algorithms/data_structures/HashTable.java`](https://github.com/lauramoroni/ED1/blob/main/algorithm/data_structures/HashTable.java)
 
 - **Complexidade do tempo de busca:**
   - Melhor caso: `O(1)`
@@ -28,7 +28,7 @@ Tabela Hash é uma estrutura de dados que associa chaves de pesquisa a valores, 
 ## Árvore Binária
 Árvore binária é uma estrutura de dados dinâmica composta por nós, onde cada nó possui no máximo dois filhos. A árvore binária é utilizada para representar estruturas hierárquicas, como árvores de busca binária.
 
-- [`algorithms/data_structures/BinaryTree.java`](https://github.com/lauramoroni/ED1/tree/main/algorithm/data_structures/BinaryTree.java)
+- [`algorithms/data_structures/Binaryblob.java`](https://github.com/lauramoroni/ED1/blob/main/algorithm/data_structures/Binaryblob.java)
 
 - **Complexidade do tempo de busca:**
   - Média: `O(log n)`
